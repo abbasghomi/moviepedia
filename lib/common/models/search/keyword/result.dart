@@ -1,0 +1,18 @@
+
+import 'package:json_annotation/json_annotation.dart';
+
+part 'result.g.dart';
+
+@JsonSerializable()
+class Result {
+    int id;
+    String name;
+
+    Result({required this.id, required this.name});
+
+    factory Result.fromJson(Map<String, dynamic> json) =>
+        _$ResultFromJson(json);
+
+    Map<String, dynamic> toJson() => _$ResultToJson(this);
+
+}
